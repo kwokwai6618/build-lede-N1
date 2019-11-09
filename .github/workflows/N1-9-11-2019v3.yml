@@ -1,4 +1,4 @@
-name: N1-9-11-2019v2
+name: N1-9-11-2019v3
 
 on:
   push:
@@ -31,7 +31,7 @@ jobs:
     - name: Build
       run: | 
         cd /home/runner/lede 
-        make -j2
+        make -j1 V=s
     - uses: actions/upload-artifact@master
       with:
         name: result
