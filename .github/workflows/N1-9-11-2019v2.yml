@@ -1,4 +1,4 @@
-name: N1-9-11-2019
+name: N1-9-11-2019v2
 
 on:
   push:
@@ -22,12 +22,6 @@ jobs:
         sudo chmod -R 777 lede
         sudo chown -R runner:runner lede
         cd /home/runner/lede
-        ./scripts/feeds update -a 
-        ./scripts/feeds install -a
-    - name: git checkout
-      run: |
-        cd /home/runner/lede
-        git checkout 7f02e5d6fee4e6644eb56f612b6ed1e3ecfc433a.git
         ./scripts/feeds update -a 
         ./scripts/feeds install -a
     - name: Clone config
